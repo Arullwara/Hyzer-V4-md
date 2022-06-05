@@ -145,7 +145,7 @@ module.exports = {
                     if (!isNumber(user.makananpet)) user.makananpet = 0
         
                     if (!isNumber(user.antispam)) user.antispam = 0
-                    if (!isNumber(user.antispamlastclaim)) user.antispamlastclaim = 0
+                    if (!isNumber(user.antispamlastclaim)) user.antispamlastclaim = 5
         
                     if (!isNumber(user.kayu)) user.kayu = 0
                     if (!('kingdom' in user)) user.kingdom = false
@@ -359,8 +359,8 @@ module.exports = {
                     anakrubah: 0,
                     anakanjing: 0,
                     makananpet: 0,
-                    antispam: 0,
-                    antispamlastclaim: 0,
+                    antispam: 5,
+                    antispamlastclaim: 5,
                     kayu: 0,
                     batu: 0,
                     string: 0,
@@ -390,7 +390,7 @@ module.exports = {
                     lastturu: 0,
                     lastseen: 0,
                     lastSetStatus: 0,
-                    registered: false,
+                    registered: true,
                     apel: 20,
                     mangga: 0,
                     stroberi: 0,
@@ -580,7 +580,7 @@ module.exports = {
                         fail('private', m, this)
                         continue
                     }
-                    if (plugin.register == true && _user.registered == false) { // Butuh daftar?
+                    if (plugin.register == true && _user.registered == true) { // Butuh daftar?
                         fail('unreg', m, this)
                         continue
                     }
