@@ -123,6 +123,16 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
         global.dfail('owner', m, conn)
         throw false
       }
+pengaturan . jadibot  =  diaktifkan
+      merusak
+    kasus  'simi' :
+      jika  ( ! ( isAdmin  ||  isOwner ) )  {
+      if  ( m . isGroup )  {
+        global . dfail ( 'admin' ,  m ,  samb )
+        lempar  0
+      } 
+      mengobrol . simi  =  diaktifkan
+      merusak
       setting.jadibot = isEnable
       break
     default:
